@@ -1,0 +1,179 @@
+/*INFORMAÇÕES GERAIS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    line-height: 160%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/*HEADER*/
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #262629;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+
+ h1{
+    color: white;
+    margin: 0 50px;
+    font-size: 35px;
+}
+/*FOTO DE USUÁRIO*/
+.user {
+    margin: 0 50px;
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+
+    background-image: radial-gradient(circle at 111.24% 85.36%, #117da5 0, #1f607f 25%, #1f4459 50%, #192a35 75%, #0e1216 100%);
+    transition: transform .3s;
+}
+
+.user img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+/*INFORMAÇÕES SOBRE A ESTRUTURA DA PÁGINA*/
+main {
+    width: 80%;
+    display: grid;
+    gap: 24px;
+    margin: 32px auto;
+    margin-top: 30px;
+}
+
+
+
+/*ESTRUTURA DO SECTION*/
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+    border-radius: 8px;
+}
+
+
+
+/*SECTION (PARTE DE FILMES,SERIES,SITE)*/
+section {
+    background-image: radial-gradient(circle at 111.24% 85.36%, #117da5 0, #1f607f 25%, #1f4459 50%, #192a35 75%, #0e1216 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+.filmes , .series , .sites{
+    background-color:  #2A2634;
+    padding: 21px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+.filmes img, .series img {
+    border-radius: 8px;
+    border: 1px solid #555555; 
+} 
+
+.sites img {
+    border-radius: 8px;
+}
+
+section h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 38.4px;
+}
+
+section p {
+    color: #C1C1C1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    letter-spacing: -0.18px;
+}
+
+
+
+/*TRANSIÇÕES SECTION*/
+header div:hover {
+    transform: scale(1.1);
+}
+ 
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*ANIMAÇÕES*/
+header {
+    animation: fromTop .7s 0s backwards;
+}
+
+main section {
+    animation: fromBottom .7s 0s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: .0s;
+}
+
+main section:nth-child(2){
+    animation-delay: .3s;
+}
+
+main section:nth-child(3){
+    animation-delay: .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
